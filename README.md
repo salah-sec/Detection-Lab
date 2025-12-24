@@ -67,3 +67,23 @@ Windows Task Manager was used to verify that the downloaded malicious file (mal.
 <img width="386" height="115" alt="Screenshot 2025-12-24 211540" src="https://github.com/user-attachments/assets/ee171f9e-f5f6-491d-85d7-f892989e756a" />
 
 
+A search was performed in Splunk using the malicious file name to identify all related security events. The resulting logs provide insight into the malware execution on the Windows endpoint and allow correlation between file activity and associated system behavior.
+
+<img width="491" height="358" alt="Screenshot 2025-12-25 021450" src="https://github.com/user-attachments/assets/d1a0284d-27d5-48de-a7ad-cafcaa9e60ee" />
+
+Following the confirmation of malware execution on the Windows endpoint, Splunk was used to search for events associated with the attacker machine’s IP address. The resulting logs highlight network activity related to the compromise and help correlate endpoint execution with external communication observed during the incident.
+
+<img width="493" height="353" alt="Screenshot 2025-12-25 022904" src="https://github.com/user-attachments/assets/a06bf70d-fffa-49a9-bca1-912e8d457c19" />
+
+
+A detailed review of a specific security event was performed in Splunk to examine its associated metadata. Key fields such as the process ID and process GUID were identified at this stage, providing critical context and serving as pivot points for deeper investigation in subsequent searches.
+
+<img width="481" height="362" alt="Screenshot 2025-12-25 021639" src="https://github.com/user-attachments/assets/2209c4b5-f61d-4505-8f5e-ace9fbd3df61" />
+
+
+The process GUID associated with the malicious execution was extracted and used as a pivot for deeper investigation in Splunk. By correlating events and enriching the search with key fields, a clearer execution chain was reconstructed to understand how the attacker-initiated process was launched and operated on the system.
+
+<img width="490" height="261" alt="Screenshot 2025-12-25 022749" src="https://github.com/user-attachments/assets/781f081c-df68-4550-97b9-513ca4f81b68" />
+
+
+
